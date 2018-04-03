@@ -1,6 +1,6 @@
 go-auto-frontend
 ===
-> Atomatically generate frontends for go programs  
+> Automatically generate frontends for go programs  
 
 ![Auto Frontend screenshot](Screenshot.png)
 
