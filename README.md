@@ -6,15 +6,15 @@ go-auto-frontend
 
 ## Why?
 
-Sometimes you want to write go programms without an exhaustive REST api. Auto Frontend lets you dynamically generate a simple, web based frontend for your application.  
+Sometimes you want to write go programs without an exhaustive REST API. Auto Frontend lets you dynamically generate a simple, web-based frontend for your application.  
 
 ## How?
 
 There are currently three basic types of interactions available:
 
-1. get values from your programm
-2. set values in your programm
-3. execute a function whithout getting or setting a specific value
+1. get values from your program
+2. set values in your program
+3. execute a function without getting or setting a specific value
 
 ### Process
 
