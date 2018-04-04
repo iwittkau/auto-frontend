@@ -33,7 +33,7 @@ var (
 )
 
 func TestNew(t *testing.T) {
-	f := frontend.New("Test", "http://localhost:8080", "")
+	f := frontend.New("Test", "localhost:8080", "")
 	btnGet1 := button.NewGet("test", button.DefaultClassGet, keys, getFunc)
 	btnGet2 := button.NewGet("test", button.DefaultClassGet, keys, getFunc)
 	if err := f.RegisterGetButton(btnGet1); err != nil {
