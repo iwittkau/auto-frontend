@@ -14,6 +14,10 @@ func main() {
 	number1 := 0
 	number2 := 0
 	name := "Ingmar"
+	aStruct := struct {
+		A int
+		B int
+	}{1, 2}
 
 	// a channel to be closed for stopping
 	stop := make(chan struct{})
@@ -63,6 +67,13 @@ func main() {
 		}
 	})
 
+	// a button for getting the struct
+	btnGet4 := button.NewGet("Get Struct", button.DefaultClassGet, button.Keys{"Struct"}, func() map[string]interface{} {
+		return map[string]interface{}{
+			"Struct": aStruct,
+		}
+	})
+
 	// an input to set the variable 'name'
 	btnSet2 := button.NewSet("Set Name", button.ClassDanger, button.Keys{"Name"}, func(data map[string]interface{}) {
 		name = data["Name"].(string)
@@ -73,7 +84,7 @@ func main() {
 	// f := frontend.New("Auto Frontend", "localhost:8080", "/Users/Ingmar/go/src/github.com/iwittkau/auto-frontend/frontend/tmpl/frontend.html")
 
 	// register get buttons
-	f.RegisterGetButtons(btnGet1, btnGet2, btnGet3)
+	f.RegisterGetButtons(btnGet1, btnGet2, btnGet3, btnGet4)
 
 	// register set buttons
 	f.RegisterSetButtons(btnSet1, btnSet1a, btnSet1b, btnSet2)

@@ -2,6 +2,7 @@ package frontend
 
 import (
 	"encoding/json"
+	"fmt"
 	"log"
 	"sync"
 
@@ -270,6 +271,8 @@ func (f *Frontend) Start() error {
 			}
 		}
 	})
+
+	fmt.Println(fmt.Sprintf("Auto Frontend '%s' listening on http://%s", f.name, f.address))
 
 	return http.ListenAndServe(f.address, nil)
 }
